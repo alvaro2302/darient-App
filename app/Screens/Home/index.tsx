@@ -1,24 +1,21 @@
-import getCategories from "@/app/services/ServiceCategories";
+import ModelViewModel from "@/app/ModelViewModels/HomeViewModel";
+import { useCategoryStore } from "@/app/Store/Categories";
+import ListCategories from "@/components/ListCategories";
 import { useEffect } from "react";
-import { Text, View } from "react-native";
 
-const Home = () => {
-  const fetchCategories = async () => {
-    try {
-      const categories = await getCategories();
-      console.log("Fetched Categories:", categories);
-    } catch (error) {
-      console.error("Error fetching categories:", error);
-    }
-  };
+const Home = (props) => {
+  const {fetchCategories} = ModelViewModel();
+  const {categories} = useCategoryStore();
   useEffect(() => {
     fetchCategories();
   }, []);
-
+  const navigationToScreenJokes = (category: string) => {
+    props.navigation.navigate('Details', { category });
+  }
   return (
-    <View>
-      <Text>Welcome to the Home Screen!</Text>
-    </View>
+    <>
+      <ListCategories listCategories={categories} navigatoToScreenJokes={navigationToScreenJokes}  />
+    </>
   );
 };
 export default Home;
