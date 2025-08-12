@@ -12,8 +12,15 @@ const SignOutViewModel = () => {
      const isLogin = async (user: User): Promise<boolean> => {
         console.log('Signing in user:', user);
         const result = await SignInUser(user);
-        await successfullLogin(user);
-        return result;
+        if(result.isSignedIn) {
+            console.log('Sign in result:', result);
+            const userLogged = {
+                id: result.id,
+                email: result.user.email,
+            };
+            await successfullLogin(userLogged);
+        }
+        return result.isSignedIn;
     }
     return {
         isRegistered,
