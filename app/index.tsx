@@ -1,10 +1,10 @@
 import 'react-native-reanimated';
+import InitialStack from './StackScreen/InitialStack';
 
-import TabBottoms from './TabBottoms';
 
 export default function RootLayout() {
-
+  
   return (
-    <TabBottoms/>
+    <InitialStack/>
   );
 }

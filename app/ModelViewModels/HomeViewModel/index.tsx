@@ -1,5 +1,5 @@
 import Category from "@/app/helper/Category";
-import getCategories from "@/app/Services/ServiceCategories";
+import getCategories from "@/app/services/ServiceCategories";
 import { useCategoryStore } from "@/app/Store/Categories";
 
 const ModelViewModel = () => {
