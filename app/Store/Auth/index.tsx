@@ -1,12 +1,12 @@
-import User from '@/app/helper/User';
+import UserLogged from '@/app/helper/UserLogged';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 interface AuthStoreState {
-    user: User | null;
+    user: UserLogged | null;
     loading: boolean;
-    setUser: (user: User | null) => void; 
+    setUser: (user: UserLogged | null) => void; 
     validateUser: () => Promise<boolean>;
-    successfullLogin: (user: User) => Promise<void>;
+    successfullLogin: (user: UserLogged) => Promise<void>;
 };
 export const useAuthStore = create<AuthStoreState>() (set => ({
     user: null,
@@ -24,7 +24,7 @@ export const useAuthStore = create<AuthStoreState>() (set => ({
        
 
     },
-    successfullLogin: async (user: User) => {
+    successfullLogin: async (user: UserLogged) => {
         console.log('Setting user in store:', user);
         set({ loading: true });
         await AsyncStorage.setItem('user', JSON.stringify(user));
