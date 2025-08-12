@@ -1,5 +1,5 @@
 export enum NameScreens {
   Home = "Home",
   Favorites = "Favorites",
-  Details = "Details",
+  Details = "DetailsJoke",
 }

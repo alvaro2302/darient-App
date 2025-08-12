@@ -1,5 +1,5 @@
 import { NameScreens } from "@/app/helper/values";
-import Details from "@/app/Screens/Details";
+import DetailsJoke from "@/app/Screens/Details";
 import Home from "@/app/Screens/Home";
 import { createNativeStackNavigator } from "react-native-screens/native-stack";
 const HomeStack = () => {
@@ -8,13 +8,13 @@ const HomeStack = () => {
   <Stack.Navigator initialRouteName={NameScreens.Home} screenOptions={{headerShown: false}}>
     <Stack.Screen
       name={NameScreens.Home}
-      component={Home} // Replace with your Home component
+      component={Home}
       options={{ headerShown: false }}
     />
     <Stack.Screen
       name={NameScreens.Details}
-      component={Details} // Replace with your Details component
-      options={{ title: 'Details' }}
+      component={DetailsJoke}
+      options={{ headerShown: false }}
     />
   </Stack.Navigator>
 );

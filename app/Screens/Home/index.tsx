@@ -1,3 +1,4 @@
+import { NameScreens } from "@/app/helper/values";
 import ModelViewModel from "@/app/ModelViewModels/HomeViewModel";
 import { useCategoryStore } from "@/app/Store/Categories";
 import ListCategories from "@/components/ListCategories";
@@ -10,7 +11,7 @@ const Home = (props) => {
     fetchCategories();
   }, []);
   const navigationToScreenJokes = (category: string) => {
-    props.navigation.navigate('Details', { category });
+    props.navigation.navigate(NameScreens.Details, { category });
   }
   return (
     <>
