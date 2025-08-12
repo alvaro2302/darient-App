@@ -1,4 +1,4 @@
-import getJokeRandom from "@/app/services/ServiceJoke";
+import { getJokeRandom } from "@/app/services/ServiceJoke";
 import { useJokeStore } from "@/app/Store/Joke";
 const JokeViewModel = () => {
   const { setLoading, saveJoke } = useJokeStore();
