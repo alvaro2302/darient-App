@@ -1,5 +1,6 @@
 import Joke from "@/app/helper/Joke";
 import UserLogged from "@/app/helper/UserLogged";
+import FavoriteViewModel from "@/app/ModelViewModels/FavoriteViewModel";
 import { useState } from "react";
 import { Pressable } from "react-native";
 import { ActivityIndicator, Icon } from "react-native-paper";
@@ -11,7 +12,7 @@ interface FavoriteHeartProps {
 }
 
 const FavoriteHeart = (props: FavoriteHeartProps) => {
-  
+  const {getAllFavorites} = FavoriteViewModel()
   const [color, setColor] = useState('gray');
   const [loading, setLoading] = useState(false);
   const { joke, userLogged, addFavorite } = props;
@@ -20,6 +21,9 @@ const FavoriteHeart = (props: FavoriteHeartProps) => {
     const isAddFavorite = await addFavorite?.(joke, userLogged);
     setColor(isAddFavorite ? 'red' : 'gray');
     setLoading(false);
+    if(isAddFavorite){
+      getAllFavorites(userLogged);
+    }
   };
   if(loading) {
     return <ActivityIndicator size='small' style={{flex: 1, justifyContent: 'center', alignItems: 'center'}} />
