@@ -9,6 +9,7 @@ interface FormValidateProps {
     loading: boolean;
     buttonText?: string;
     navigate?: () => void;
+    notification?: () => Promise<void>;
 }
 
 
@@ -30,12 +31,13 @@ const {isSubmitSuccefull, buttonText,navigate} = props;
           email: values.email,
           password: values.password,
         };
-        console.log("values", user)
         const isSubmitSuccefullResult = await isSubmitSuccefull(user);
-        console.log("submit result", isSubmitSuccefullResult);
         if (isSubmitSuccefullResult) {
           formikActions.resetForm();
           Alert.alert("Success", "Operation completed successfully");
+          if (buttonText === "Login") {
+            await props.notification?.();
+          }
           if(navigate){
             navigate();
          }
