@@ -223,6 +223,17 @@ Scripts útiles:
    - Notificaciones locales: invoca `initializeNotification()` y programa una notificación en el lugar deseado.
 
 ---
+## Pruebas 
+<img width="1206" height="2622" alt="offlineFavorites" src="https://github.com/user-attachments/assets/d1467010-9976-40ed-87bb-5d31d8f8affc" />
+<img width="1206" height="2622" alt="NotificationLogin" src="https://github.com/user-attachments/assets/a9f8304e-4cf6-480d-97e4-df392ddda624" />
+<img width="1206" height="2622" alt="NoConecction" src="https://github.com/user-attachments/assets/2a214860-692a-4351-a8bc-e63d9994944d" />
+  <img width="602" height="1255" alt="Agregar Favorito" src="https://github.com/user-attachments/assets/13557a98-7c77-41eb-9198-3a7fdae3cdea" />
+
+<img width="379" height="766" alt="NotificationAndroid" src="https://github.com/user-attachments/assets/675d9c55-9315-4741-82e4-b49b89371e6b" />
+<img width="602" height="1322" alt="Register" src="https://github.com/user-attachments/assets/cf5b7447-5949-44ef-a709-41060be51eca" />
+<img width="602" height="1299" alt="Login" src="https://github.com/user-attachments/assets/614f715b-58e5-4616-9eb1-6f755880c65c" />
+<img width="597" height="1255" alt="Search" src="https://github.com/user-attachments/assets/a6b2e0c3-609b-45df-b9b8-b091f1a66475" />
+<img width="600" height="1287" alt="ListaDeFavorites" src="https://github.com/user-attachments/assets/b205b888-2a70-4e93-a4d1-b658ea2cccaa" />
 
 ## Notas y buenas prácticas
 
