@@ -1,6 +1,6 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import React from "react";
 import { NameScreens } from "../helper/values";
 import Favorites from "../Screens/Favorites";
 import Search from "../Screens/Search";
@@ -25,6 +25,7 @@ const TabBottoms = () => {
             },
             tabBarActiveTintColor: 'purple',
             tabBarInactiveTintColor: 'black',
+            tabBarTestID: "tab-bottoms",
         })}
         initialRouteName={NameScreens.Home}>
             <Tab.Screen name={NameScreens.Home} component={HomeStack} />
